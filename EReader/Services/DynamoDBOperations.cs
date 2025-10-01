@@ -7,8 +7,8 @@ namespace EReader.Services
 {
     class DynamoDBOperations
     {
-        BasicAWSCredentials credentials;
-        AmazonDynamoDBClient client;
+        private BasicAWSCredentials credentials;
+        private AmazonDynamoDBClient client;
 
         private readonly string? accessKey = Environment.GetEnvironmentVariable("AWS_ACCESS_KEY_ID");
         private readonly string? secretKey = Environment.GetEnvironmentVariable("AWS_SECRET_ACCESS_KEY");
@@ -16,10 +16,10 @@ namespace EReader.Services
         public DynamoDBOperations()
         {
             credentials = new BasicAWSCredentials(accessKey, secretKey);
-            client = new AmazonDynamoDBClient(credentials);
+            client = new AmazonDynamoDBClient(credentials, Amazon.RegionEndpoint.USEast1);
         }
 
-        private async Task<Dictionary<string, AttributeValue>> GetItem(string userName)
+        private  async Task<Dictionary<string, AttributeValue>> GetItem(string userName)
         {
             GetItemRequest request = new GetItemRequest
             {
