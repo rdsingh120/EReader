@@ -1,4 +1,5 @@
-﻿using EReader.Services;
+﻿using EReader.Models;
+using EReader.Services;
 using EReader.Views;
 using System.Windows;
 
@@ -22,15 +23,16 @@ namespace EReader
                 return;
             }
 
-            bool isValid = await LoginOperation.CheckCredentails(userName, password);
+            User? user = await LoginOperation.CheckCredentails(userName, password);
 
 
 
-            if (isValid)
+            if (user != null)
             {
-                EBookReader eBookReader = new EBookReader();
+                EBookReader eBookReader = new EBookReader(user);
                 this.Hide();
                 eBookReader.ShowDialog();
+                this.Close();
             }
             else
             {
