@@ -19,14 +19,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="4.0.6.5" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="4.0.6.6" />
+    <PackageReference Include="AWSSDK.S3" Version="4.0.7.7" />
     <PackageReference Include="DotNetEnv" Version="3.1.1" />
+    <PackageReference Include="Syncfusion.PdfViewer.WPF" Version="31.1.22" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update=".env">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="UserControls\BookControl.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
   </ItemGroup>
 
 </Project>
