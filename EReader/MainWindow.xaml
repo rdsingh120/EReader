@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Image Source="/images/logo.png" Width="150" Height="100" />
-        <Label Grid.Row="1" Content="Amazon DynamoDB Service" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="25" FontWeight="Bold" Margin="0 0 0 20"/>
+        <TextBlock Grid.Row="1" Text="Amazon DynamoDB Service" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="0 0 0 20"/>
         <Grid Grid.Row="2" Margin="0 0 0 10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
