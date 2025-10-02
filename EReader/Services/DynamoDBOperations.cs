@@ -49,7 +49,8 @@ namespace EReader.Services
                 {
                     Name = bookAttribute.M["Name"].S,
                     LastReadPageNumber = int.Parse(bookAttribute.M["LastReadPageNumber"].N),
-                    LastReadTime = bookAttribute.M["LastReadTime"].S
+                    LastReadTime = bookAttribute.M["LastReadTime"].S,
+                    Author = bookAttribute.M["Author"].S,
                 };
                 books.Add(book);
             }
