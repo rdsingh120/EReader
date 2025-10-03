@@ -97,6 +97,24 @@ cd EReader
 AWS_ACCESS_KEY_ID=your-access-key
 AWS_SECRET_ACCESS_KEY=your-secret-key
 ```
+> ⚠️ **AWS Service Usage:**  
+> 
+> - **DynamoDB:**  
+>   - Stores user credentials for login  
+>   - Stores book metadata: book names, authors, last read page, and last read time  
+>   - Fetches the book list dynamically for each user
+> 
+> - **S3:**  
+>   - Stores the actual PDF files  
+>   - PDFs are **retrieved as streams** and loaded directly into the Syncfusion PDF Viewer (no local download required)
+> 
+> The IAM user must have:
+> - **Full DynamoDB access**  
+> - **Full S3 access**  
+>
+> Make sure the `.env` file with AWS credentials is **excluded from version control** (`.gitignore`) for security.
+
+
 
 ### 3. Install NuGet dependencies
 ```sh
