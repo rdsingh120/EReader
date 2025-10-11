@@ -81,11 +81,12 @@ EReader/
 ├── login.png
 ├── booklist.png
 └── pdfreader.png
-
+```
 
 ## ⚙️ Setup
 
-### 1. Clone the repo  
+### 1. Clone the repo
+
 ```sh
 git clone https://github.com/your-username/EReader.git
 cd EReader
